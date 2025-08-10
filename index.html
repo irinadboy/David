@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preschool Fun!</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>Preschool Fun!</h1>
+      <p class="subtitle">Use <kbd>WASD</kbd>/<kbd>Arrows</kbd> to move, <kbd>E</kbd> to interact, <kbd>P</kbd> to pause.</p>
+    </header>
+    <canvas id="game" width="960" height="540" aria-label="Game canvas" role="img"></canvas>
+    <div id="mobileControls" aria-hidden="false">
+      <button id="btnUp">▲</button>
+      <div class="row">
+        <button id="btnLeft">◀</button>
+        <button id="btnInteract">E</button>
+        <button id="btnRight">▶</button>
+      </div>
+      <button id="btnDown">▼</button>
+    </div>
+    <footer>
+      <small>© 2025 — A tiny, wholesome web game.</small>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
