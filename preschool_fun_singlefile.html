@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preschool Fun!</title>
+  <style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #f6efe7; color: #2a2a2a; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+#wrap { max-width: 980px; margin: 0 auto; padding: 12px; }
+header { text-align: center; }
+h1 { margin: 8px 0 4px; font-size: 2rem; }
+.subtitle { margin: 0 0 8px; color: #5a5a5a; }
+#game { width: 100%; border-radius: 12px; display: block; background: #cfe8ff; border: 2px solid #3a6ea5; }
+footer { text-align: center; margin-top: 8px; color: #6a6a6a; }
+
+#mobileControls { display: grid; place-items: center; gap: 6px; margin-top: 8px; }
+#mobileControls .row { display: flex; gap: 10px; }
+#mobileControls button { font-size: 20px; padding: 10px 14px; border-radius: 10px; border: 2px solid #3a6ea5; background: white; }
+#mobileControls button:active { transform: translateY(1px); }
+
+@media (min-width: 820px) {
+  #mobileControls { display: none; }
+}
+
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <h1>Preschool Fun!</h1>
+      <p class="subtitle">Use <kbd>WASD</kbd>/<kbd>Arrows</kbd> to move, <kbd>E</kbd> to interact, <kbd>P</kbd> to pause.</p>
+    </header>
+    <canvas id="game" width="960" height="540" aria-label="Game canvas" role="img"></canvas>
+    <div id="mobileControls" aria-hidden="false">
+      <button id="btnUp">▲</button>
+      <div class="row">
+        <button id="btnLeft">◀</button>
+        <button id="btnInteract">E</button>
+        <button id="btnRight">▶</button>
+      </div>
+      <button id="btnDown">▼</button>
+    </div>
+    <footer>
+      <small>© 2025 — A tiny, wholesome web game.</small>
+    </footer>
+  </div>
+  <script>
+
+    (() => {
+      const canvas = document.getElementById('game');
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#cfe8ff';
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle = '#2a2a2a';
+      ctx.font = '24px sans-serif';
+      ctx.fillText('If you see this, the full game JS didn\'t load.', 40, 60);
+    })();
+    
+</script>
+</body>
+</html>
